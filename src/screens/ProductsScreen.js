@@ -3,9 +3,10 @@ import Bounce from 'react-reveal/Bounce';
 import Heading from '../components/Heading';
 import Product from '../components/products/Product';
 import useFetch from '../hooks/useFetch';
+import useProduct from '../hooks/useProduct';
 
 const ProductsScreen = () => {
-    const [data] = useFetch('products');
+    const [data] = useProduct();
 
     return (
         <section className="max-w-screen-xl py-24 mx-auto px-6">

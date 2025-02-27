@@ -6,13 +6,14 @@ import Fade from 'react-reveal/Fade';
 import { Link, useParams } from 'react-router-dom';
 import swal from 'sweetalert';
 import useFetch from '../hooks/useFetch';
+import useProduct from '../hooks/useProduct';
 import useOrder from '../hooks/useOrder';
 
 
 const ProductDetailScreen = () => {
     const [disabled, setDisabled] = useState(false);
     const { title } = useParams();
-    const [data] = useFetch('products');
+    const [data] = useProduct();
     const { handleCart , orders } = useOrder();
 
     return (
