@@ -15,6 +15,7 @@ import ProductsScreen from './screens/ProductsScreen';
 import ServicesDetailScreen from './screens/ServicesDetailScreen';
 import SignInScreen from './screens/SignInScreen';
 import SignUpScreen from './screens/SignUpScreen';
+import CheckoutScreen from './screens/CheckoutScreen'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route exact path="/contact"><ContactScreen /></Route>
             <PublicRoute path="/signup"><SignUpScreen /></PublicRoute>
             <PublicRoute path="/signin"><SignInScreen /></PublicRoute>
+            <Route path="/checkout"><CheckoutScreen /></Route>
             <PrivateRoute exact path="/services/:title"><ServicesDetailScreen /></PrivateRoute>
             <Route exact path="/products/"><ProductsScreen /></Route>
             <PrivateRoute exact path="/products/:title"><ProductDetailScreen /></PrivateRoute>
